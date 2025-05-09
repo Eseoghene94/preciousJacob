@@ -81,18 +81,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
     transition: {
       duration: 3,
       repeat: Infinity,
-      repeatType: "reverse",
-      ease: "easeInOut",
-    },
-  };
-
-  const backgroundBlobAnimation = {
-    scale: [1, 1.05, 1],
-    rotate: [0, 5, 0],
-    transition: {
-      duration: 8,
-      repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: "reverse" as const,
       ease: "easeInOut",
     },
   };
@@ -148,7 +137,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             transition: {
               ...floatingAnimation.transition,
               delay: 1,
-              repeatType: "reverse" as "reverse",
+              repeatType: "reverse" as const,
             },
           }}
         ></motion.div>
@@ -299,7 +288,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -323,7 +312,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
         >
           Scroll Down
         </motion.p>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
