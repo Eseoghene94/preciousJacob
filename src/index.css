@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans;
+}
+
+.skill-bar-fill {
+  animation: fillBar 1.5s ease forwards;
+}
+
+/* Custom animation for skill bars */
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--width, 0%);
+  }
+}
+
+.skill-bar-fill {
+  --width: attr(data-width);
+}
