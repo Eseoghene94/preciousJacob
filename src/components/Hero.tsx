@@ -166,7 +166,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
               variants={itemVariants}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-500 inline-block">
-                Precious Jacob
+                Precious Joseph
               </span>
             </motion.h1>
 
